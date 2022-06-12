@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,15 +17,18 @@ public class ArbetsprovTest {
 
     @BeforeTest
     public void setUp() {
-        //Sets up the web driver.
-        System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
+        // Sets up the web driver.
+
+        System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe"); //Chrome Driver version 95.0.4638.69.
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @Test
     public void isStringFromFolksamAsExpected() {
-        //Open up google.se and agree to demands.
+        //fetches a string from Folksam's home insurances webpage and compares it to an expected string.
+
+        //Open up google.se and agree to cookies.
         driver.get("https://www.google.se/");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
 

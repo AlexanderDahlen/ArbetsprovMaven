@@ -31,7 +31,7 @@ public class ArbetsprovPOMTest {
     @BeforeTest
     public void setUp() {
         //Sets up the web driver
-        System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe"); //Chromedriver v95
+        System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe"); //Chromedriver v95.0.4638.69.
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.get("https://www.google.se/");
@@ -39,6 +39,8 @@ public class ArbetsprovPOMTest {
 
     @Test
     public void isStringFromFolksamAsExpected() {
+        //fetches a string from Folksam's home insurances webpage and compares it to an expected string.
+
         //Google home page navigation
         objGoogleHomePage = new GoogleHomePage(driver);
         objGoogleHomePage.acceptCookies();
