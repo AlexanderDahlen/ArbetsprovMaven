@@ -18,7 +18,7 @@ public class FolksamHomePage {
         driver.findElement(acceptCookiesButton).click();
     }
 
-    public void clickInsurancePicLink() {
+    public void clickHomeInsurancePicLink() {
         //Clicks home insurances picture, which activates a link to home insurances.
         driver.findElement(homeInsurancesPic).click();
     }

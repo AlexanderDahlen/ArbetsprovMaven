@@ -51,7 +51,7 @@ public class ArbetsprovPOMTest {
         //Folksam homepage navigation
         objFolksamHomePage = new FolksamHomePage(driver);
         objFolksamHomePage.acceptCookies();
-        objFolksamHomePage.clickInsurancePicLink();
+        objFolksamHomePage.clickHomeInsurancePicLink();
 
         //Folksam home insurances webpage navigation
         objFolksamHomeInsurancesPage = new FolksamHomeInsurancesPage(driver);
